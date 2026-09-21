@@ -58,17 +58,17 @@ export const PracticeAreasGrid: React.FC<PracticeAreasGridProps> = ({
         </div>
 
         {/* 6 Specialty Cards Grid */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-14 grid items-stretch grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {PRACTICE_AREAS.map((pa: PracticeArea) => (
             <div
               key={pa.id}
-              className="group relative bg-white rounded-2xl border border-slate-200/80 hover:border-[#708238]/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden"
+              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm transition-all duration-300 hover:border-[#708238]/50 hover:shadow-xl"
             >
               {/* Subtle top indicator bar */}
               <div className="h-1.5 w-full bg-gradient-to-r from-[#D9D0CA] via-[#D1AF5C] to-[#D9D0CA] group-hover:from-[#C7A14C] group-hover:to-[#B88A2D] transition-all duration-300" />
 
-              <div className="p-7 space-y-5">
-                <div className="flex items-center justify-between">
+              <div className="flex flex-1 flex-col space-y-5 p-7">
+                <div className="flex min-h-14 items-center justify-between">
                   <div className="w-14 h-14 rounded-xl bg-slate-50 border border-slate-200/80 group-hover:bg-[#C7A14C]/10 group-hover:border-[#C7A14C]/30 flex items-center justify-center transition-colors">
                     {getIcon(pa.iconName)}
                   </div>

@@ -213,25 +213,28 @@ export const EligibilityWidget: React.FC<EligibilityWidgetProps> = ({
                   {/* Practice Area Choice */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
-                      { id: 'personal-injury', label: 'Personal Injury / Accident / Crash', desc: 'Vehicular collision, trucking accident, slip & fall' },
-                      { id: 'commercial-litigation', label: 'Commercial & Business Dispute', desc: 'Breach of contract, partner freezeout, trade secrets' },
-                      { id: 'employment-labor', label: 'Wrongful Termination / Retaliation', desc: 'Fired illegally, whistleblower, unpaid compensation' },
-                      { id: 'medical-malpractice', label: 'Medical Malpractice / Surgical Error', desc: 'Failure to diagnose, hospital harm, birth injury' },
-                      { id: 'family-estate', label: 'High-Asset Divorce / Trust Contest', desc: 'Significant assets, trustee dispute, inheritance' },
-                      { id: 'criminal-defense', label: 'Federal / Regulatory / Criminal Defense', desc: 'Target letter, DOJ/SEC inquiry, arrest, subpoena' }
+                      { id: 'personal-injury', label: 'Personal Injury / Accident / Crash', desc: 'Vehicular collision, trucking accident, slip & fall', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=160&q=80' },
+                      { id: 'commercial-litigation', label: 'Commercial & Business Dispute', desc: 'Breach of contract, partner freezeout, trade secrets', image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=160&q=80' },
+                      { id: 'employment-labor', label: 'Wrongful Termination / Retaliation', desc: 'Fired illegally, whistleblower, unpaid compensation', image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=160&q=80' },
+                      { id: 'medical-malpractice', label: 'Medical Malpractice / Surgical Error', desc: 'Failure to diagnose, hospital harm, birth injury', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=160&q=80' },
+                      { id: 'family-estate', label: 'High-Asset Divorce / Trust Contest', desc: 'Significant assets, trustee dispute, inheritance', image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=160&q=80' },
+                      { id: 'criminal-defense', label: 'Federal / Regulatory / Criminal Defense', desc: 'Target letter, DOJ/SEC inquiry, arrest, subpoena', image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=160&q=80' }
                     ].map((item) => (
                       <button
                         key={item.id}
                         type="button"
                         onClick={() => setPracticeArea(item.id)}
-                        className={`text-left p-4 rounded-xl border transition-all ${
+                        className={`flex min-h-[92px] items-center gap-4 text-left p-4 rounded-xl border transition-all ${
                           practiceArea === item.id
                             ? 'border-[#5F6F2F] bg-[#F1F3E8]/50 shadow-sm ring-1 ring-[#708238]'
                             : 'border-slate-200 hover:border-slate-300 bg-white'
                         }`}
                       >
-                        <p className="font-bold text-sm text-[#30251F]">{item.label}</p>
-                        <p className="text-xs text-slate-500 mt-1">{item.desc}</p>
+                        <img src={item.image} alt="" aria-hidden="true" className="h-14 w-14 shrink-0 rounded-xl object-cover shadow-sm" />
+                        <div className="min-w-0">
+                          <p className="font-bold text-sm text-[#30251F]">{item.label}</p>
+                          <p className="text-xs text-slate-500 mt-1">{item.desc}</p>
+                        </div>
                       </button>
                     ))}
                   </div>
