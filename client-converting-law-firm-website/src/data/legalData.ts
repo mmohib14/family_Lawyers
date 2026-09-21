@@ -1,4 +1,4 @@
-import { PracticeArea, Attorney, ClientReview } from '../types';
+import { PracticeArea, Attorney, CaseResultItem, ClientReview } from '../types';
 
 export const PRACTICE_AREAS: PracticeArea[] = [
   {
@@ -310,6 +310,33 @@ export const CLIENT_REVIEWS: ClientReview[] = [
     verifiedSource: 'Martindale-Hubbell',
     reviewText: 'The hospital insisted my husband’s sudden death was an unavoidable heart attack, but Victoria Vanguard had top cardiologists review the telemetry charts and found negligence in the emergency room. She secured $9.1M for our children’s future. Compassionate, relentless, and deeply ethical.',
     outcomeTag: '$9.1M Hospital Negligence Win'
+  }
+];
+
+export const CASE_RESULTS: CaseResultItem[] = [
+  {
+    id: 'cr-1', amount: '$14,850,000', title: 'Commercial Trucking Multi-Vehicle Collision', practiceArea: 'personal-injury', categoryName: 'Personal Injury', settlementType: 'Settlement', year: '2025',
+    summary: 'Catastrophic injury settlement against a national freight company following disputed hours-of-service violations.', leadAttorney: 'Victoria Vanguard, Esq.', keyDetails: ['Pre-trial policy limits tender', 'Overcame disputed liability defense', 'Lifetime annuity structured']
+  },
+  {
+    id: 'cr-2', amount: '$22,400,000', title: 'Trade Secret Misappropriation & Patent Breach', practiceArea: 'commercial-litigation', categoryName: 'Commercial Litigation', settlementType: 'Jury Verdict', year: '2025',
+    summary: 'Federal jury verdict involving proprietary biotech algorithmic trade secrets taken by departing executives.', leadAttorney: 'Marcus Sterling, Esq.', keyDetails: ['Triple statutory damages awarded', 'Permanent worldwide injunctive relief', 'Full legal fee reimbursement']
+  },
+  {
+    id: 'cr-3', amount: '$6,250,000', title: 'Executive Whistleblower Retaliation & Wrongful Termination', practiceArea: 'employment-labor', categoryName: 'Employment Law', settlementType: 'Arbitration Award', year: '2025',
+    summary: 'Award for a chief compliance officer terminated after reporting SEC reporting irregularities inside a public company.', leadAttorney: 'Diana Thorne, Esq.', keyDetails: ['Overcame arbitration enforceability clauses', 'Compensatory and punitive damages', 'Reputational clearance statement']
+  },
+  {
+    id: 'cr-4', amount: '$9,100,000', title: 'Hospital Failure-to-Diagnose & Surgical Malpractice', practiceArea: 'medical-malpractice', categoryName: 'Medical Malpractice', settlementType: 'Settlement', year: '2024',
+    summary: 'Settlement against a regional healthcare system for failure to diagnose an acute aortic dissection in emergency triage.', leadAttorney: 'Victoria Vanguard, Esq.', keyDetails: ['Deposed 14 medical specialists', 'Comprehensive life-care plan established', 'Hospital revised triage protocol']
+  },
+  {
+    id: 'cr-5', amount: '$18,500,000', title: 'Multi-State High-Net-Worth Asset & Trust Dissolution', practiceArea: 'family-estate', categoryName: 'Family & Estate', settlementType: 'Settlement', year: '2025',
+    summary: 'Beneficiary rights preserved in a contested offshore trust dispute involving real estate and private equity valuations.', leadAttorney: 'Nathaniel Hayes, Esq.', keyDetails: ['Preserved hereditary family trusts', 'Avoided liquidation of operating entities', 'Confidential mediation resolution']
+  },
+  {
+    id: 'cr-6', amount: 'Full Dismissal', title: 'Federal Securities Fraud & Wire Allegations', practiceArea: 'criminal-defense', categoryName: 'White Collar Defense', settlementType: 'Jury Verdict', year: '2024',
+    summary: 'Complete dismissal of 18 felony counts against a technology founder before jury empanelment.', leadAttorney: 'Marcus Sterling, Esq.', keyDetails: ['Fourth Amendment violation established', 'All assets unfrozen by DOJ', 'No criminal record maintained']
   }
 ];
 

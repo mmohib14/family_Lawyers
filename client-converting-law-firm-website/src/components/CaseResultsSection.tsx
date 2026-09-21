@@ -12,7 +12,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { CaseResultItem } from '../types';
-import { CLIENT_REVIEWS, TRUST_BADGES } from '../data/legalData';
+import { CASE_RESULTS, CLIENT_REVIEWS, TRUST_BADGES } from '../data/legalData';
 
 interface CaseResultsSectionProps {
   onOpenScheduler: (prefillPracticeArea?: string) => void;
@@ -40,10 +40,15 @@ export const CaseResultsSection: React.FC<CaseResultsSectionProps> = ({
       .then((res) => res.json())
       .then((data) => {
         if (isMounted && data.results) {
-          setResults(data.results);
+          setResults(data.results.length > 0 ? data.results : CASE_RESULTS.filter((item) => selectedFilter === 'all' || item.practiceArea === selectedFilter));
         }
       })
-      .catch((err) => console.error('Failed to load case results from /api/results:', err))
+      .catch((err) => {
+        console.error('Failed to load case results from /api/results:', err);
+        if (isMounted) {
+          setResults(CASE_RESULTS.filter((item) => selectedFilter === 'all' || item.practiceArea === selectedFilter));
+        }
+      })
       .finally(() => {
         if (isMounted) setIsLoading(false);
       });
