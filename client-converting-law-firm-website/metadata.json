@@ -1,0 +1,6 @@
+{
+  "name": "Client-Converting Law Firm Website",
+  "description": "High-converting legal counsel and trial attorney website featuring interactive case eligibility evaluation, 24/7 AI legal intake chat, multi-step consultation scheduler, and verified case results.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

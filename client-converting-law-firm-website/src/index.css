@@ -1,0 +1,389 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-body: 'DM Sans', 'Segoe UI', Arial, sans-serif;
+  --brand-gold: #C7A14C;
+  --brand-gold-strong: #B88A2D;
+  --brand-gold-soft: #F5E9C8;
+}
+
+@layer utilities {
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-serif-display {
+    font-family: var(--font-body);
+    letter-spacing: 0;
+  }
+}
+
+html,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background: #F7F3F1;
+    color: #41342E;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, .font-serif-display {
+    font-family: var(--font-body);
+    color: #41342E;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #41342E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5A4840;
+}
+
+html {
+  scrollbar-color: #41342E #F7F3F1;
+  scrollbar-width: thin;
+}
+
+section.bg-white.py-20 img {
+  object-fit: contain !important;
+  object-position: top center !important;
+  background: #F7F3F1;
+}
+
+/* Keep the rotating testimonial visually stable while its copy changes. */
+.bg-\[\#41342e\] {
+  min-height: 28rem;
+}
+
+.bg-\[\#41342e\] .text-slate-500 {
+  color: #9fb4b0;
+}
+
+.bg-\[\#41342e\] button {
+  border-color: rgba(214, 168, 77, 0.72);
+  color: #d6a84d;
+}
+
+.bg-\[\#41342e\] button:hover {
+  background: rgba(214, 168, 77, 0.14);
+}
+
+/* Warm the homepage palette and keep gold CTAs readable. */
+.bg-\[\#173b3b\],
+.bg-\[\#102d2d\] {
+  background-color: #41342e !important;
+}
+
+.bg-\[\#e8ede8\] {
+  background-color: #efe7df !important;
+}
+
+.text-\[\#173b3b\] {
+  color: #41342e !important;
+}
+
+.text-\[\#365451\] {
+  color: #5b463b !important;
+}
+
+.bg-\[\#d6a84d\] .text-\[\#173b3b\] {
+  color: #41342e !important;
+}
+
+.hover\:bg-\[\#285d5a\]:hover {
+  background-color: #5a443a !important;
+}
+
+.gold-cta,
+.gold-cta span,
+.gold-cta svg {
+  color: #41342e !important;
+  -webkit-text-fill-color: #41342e !important;
+  opacity: 1 !important;
+}
+
+.gold-cta:hover {
+  color: #41342e !important;
+  -webkit-text-fill-color: #41342e !important;
+}
+
+/* Replace legacy green modal states with the firm's gold accent. */
+.consultation-modal .bg-\[\#708238\] {
+  background-color: #d6a84d !important;
+  color: #41342e !important;
+}
+
+.consultation-modal .hover\:bg-\[\#5F6F2F\]:hover {
+  background-color: #f0ce75 !important;
+  color: #41342e !important;
+}
+
+.consultation-modal .text-\[\#708238\],
+.consultation-modal .text-\[\#87994B\],
+.consultation-modal .text-\[\#5F6F2F\],
+.consultation-modal .text-\[\#46521F\] {
+  color: #b88a2d !important;
+}
+
+.consultation-modal .bg-\[\#708238\] .text-white,
+.consultation-modal .bg-\[\#708238\].text-white {
+  color: #41342e !important;
+}
+
+.consultation-modal .bg-\[\#E6EAD7\],
+.consultation-modal .bg-\[\#F1F3E8\],
+.consultation-modal .bg-\[\#F1F3E8\]\/60 {
+  background-color: #f5e9c8 !important;
+}
+
+.consultation-modal .border-\[\#5F6F2F\],
+.consultation-modal .ring-\[\#708238\],
+.consultation-modal .focus\:ring-2:focus,
+.consultation-modal .focus\:border-\[\#708238\]:focus {
+  border-color: #b88a2d !important;
+  --tw-ring-color: #d6a84d !important;
+}
+
+/* Final sitewide palette bridge for legacy green utility classes. */
+.bg-\[\#708238\] {
+  background-color: #d6a84d !important;
+  color: #41342e !important;
+}
+
+.bg-\[\#708238\]\/20,
+.bg-\[\#708238\]\/40,
+.bg-\[\#87994B\]\/20,
+.bg-\[\#87994B\]\/40 {
+  background-color: rgba(214, 168, 77, 0.2) !important;
+}
+
+.hover\:bg-\[\#5F6F2F\]:hover {
+  background-color: #f0ce75 !important;
+  color: #41342e !important;
+}
+
+.text-\[\#708238\],
+.text-\[\#87994B\],
+.text-\[\#5F6F2F\],
+.text-\[\#46521F\],
+.text-\[\#53632A\],
+.text-\[\#384317\],
+.text-\[\#B3C08A\] {
+  color: #b88a2d !important;
+}
+
+.bg-\[\#E6EAD7\],
+.bg-\[\#F1F3E8\],
+.bg-\[\#F1F3E8\]\/50,
+.bg-\[\#F1F3E8\]\/60 {
+  background-color: #f5e9c8 !important;
+}
+
+.border-\[\#708238\],
+.border-\[\#5F6F2F\],
+.border-\[\#D5DDBB\],
+.border-\[\#708238\]\/30,
+.border-\[\#708238\]\/40,
+.border-\[\#708238\]\/50,
+.border-\[\#708238\]\/60,
+.border-\[\#87994B\]\/60,
+.hover\:border-\[\#708238\]\/50:hover,
+.hover\:border-\[\#87994B\]:hover,
+.ring-\[\#708238\] {
+  border-color: #b88a2d !important;
+  --tw-ring-color: #d6a84d !important;
+}
+
+.focus\:ring-2:focus,
+.focus\:ring-\[\#708238\]:focus,
+.focus\:border-\[\#708238\]:focus {
+  --tw-ring-color: #d6a84d !important;
+  border-color: #b88a2d !important;
+}
+
+.bg-\[\#257942\] {
+  background-color: #41342e !important;
+}
+
+.hover\:bg-\[\#1E6335\]:hover {
+  background-color: #5a443a !important;
+}
+
+.text-\[\#257942\],
+.hover\:text-\[\#53632A\]:hover,
+.hover\:text-\[\#46521F\]:hover {
+  color: #b88a2d !important;
+}
+
+.bg-\[\#F0F8F2\],
+.bg-\[\#D8E8DD\] {
+  background-color: #f5e9c8 !important;
+}
+
+.border-\[\#A8CDB1\],
+.border-\[\#D8E8DD\] {
+  border-color: #d6a84d !important;
+}
+
+.consultation-modal .bg-\[\#708238\] .text-white,
+.consultation-modal .bg-\[\#708238\].text-white,
+.bg-\[\#708238\] .text-white,
+.bg-\[\#708238\].text-white {
+  color: #41342e !important;
+  -webkit-text-fill-color: #41342e !important;
+}
+
+/* Calm, shared motion language for the family-law experience. */
+@keyframes apex-fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes apex-shine {
+  from { transform: translateX(-120%) skewX(-18deg); }
+  to { transform: translateX(220%) skewX(-18deg); }
+}
+
+@keyframes apex-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes apex-slide-in {
+  from { opacity: 0; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes apex-hero-drift {
+  from { transform: scale(1.02) translate3d(0, 0, 0); }
+  to { transform: scale(1.07) translate3d(-1%, -0.5%, 0); }
+}
+
+@keyframes apex-panel-settle {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes apex-gold-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(214, 168, 77, 0); }
+  50% { box-shadow: 0 0 0 5px rgba(214, 168, 77, 0.12); }
+}
+
+.apex-hero-image {
+  animation: apex-hero-drift 16s ease-in-out alternate infinite;
+  transform-origin: center;
+}
+
+.apex-hero-panel {
+  animation: apex-panel-settle 800ms 260ms ease-out both;
+}
+
+.apex-gold-pulse {
+  animation: apex-gold-pulse 3.6s ease-in-out 1.2s infinite;
+}
+
+.apex-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 360ms ease-out, transform 360ms ease-out;
+}
+
+.apex-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.apex-hero-enter {
+  animation: apex-fade-up 800ms ease-out both;
+}
+
+.apex-hero-enter-delay-1 { animation-delay: 120ms; }
+.apex-hero-enter-delay-2 { animation-delay: 220ms; }
+
+.apex-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 250ms ease, box-shadow 250ms ease, background-color 250ms ease;
+}
+
+.apex-cta::after {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 28%;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: translateX(-120%) skewX(-18deg);
+  pointer-events: none;
+}
+
+.apex-cta:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 24px rgba(65, 52, 46, 0.18);
+}
+
+.apex-cta:hover::after { animation: apex-shine 650ms ease-out; }
+
+.apex-card {
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease, background-color 280ms ease;
+}
+
+.apex-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(65, 52, 46, 0.1);
+}
+
+.apex-card-arrow {
+  opacity: 0.7;
+  transform: translateX(0);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.apex-card:hover .apex-card-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.apex-marquee-track {
+  width: max-content;
+  animation: apex-marquee 28s linear infinite;
+}
+
+.apex-testimonial-enter { animation: apex-slide-in 360ms ease-out both; }
+
+.consultation-modal .apex-step-enter {
+  animation: apex-fade-up 280ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+  .apex-reveal { opacity: 1; transform: none; }
+  .apex-hero-image,
+  .apex-hero-panel,
+  .apex-gold-pulse { animation: none; }
+}
+
+
