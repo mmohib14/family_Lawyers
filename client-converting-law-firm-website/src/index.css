@@ -120,8 +120,9 @@ section.bg-white.py-20 img {
 }
 
 .gold-cta:hover {
-  color: #41342e !important;
-  -webkit-text-fill-color: #41342e !important;
+  background-color: #b88a2d !important;
+  color: #fffaf5 !important;
+  -webkit-text-fill-color: #fffaf5 !important;
 }
 
 /* Replace legacy green modal states with the firm's gold accent. */
@@ -286,9 +287,18 @@ section.bg-white.py-20 img {
   50% { box-shadow: 0 0 0 5px rgba(214, 168, 77, 0.12); }
 }
 
+@keyframes apex-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
 .apex-hero-image {
   animation: apex-hero-drift 16s ease-in-out alternate infinite;
   transform-origin: center;
+}
+
+.apex-float {
+  animation: apex-float 7s ease-in-out infinite;
 }
 
 .apex-hero-panel {
@@ -348,6 +358,24 @@ section.bg-white.py-20 img {
 .apex-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(65, 52, 46, 0.1);
+}
+
+.apex-media-card {
+  transition: transform 350ms ease, box-shadow 350ms ease;
+}
+
+.apex-media-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px rgba(65, 52, 46, 0.12);
+}
+
+.apex-media-card img {
+  transition: transform 500ms ease, filter 500ms ease;
+}
+
+.apex-media-card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.1);
 }
 
 .apex-card-arrow {
